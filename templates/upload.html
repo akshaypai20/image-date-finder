@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Upload Image</title>
+   <link rel="stylesheet" href="/static/style.css">
+ </head>
+ <body>
+
+   {% if msg %}
+   <h1>{{ msg }}</h1>
+   {% endif %}
+  
+   <h1>Upload new Image</h1>
+  
+   <form method=post enctype=multipart/form-data>
+     <p><input type=file name=file>
+        <input type=submit value=Upload>
+   </form>
+
+   <h1>Result:</h1>
+   {% if uploaded_image %}
+     <img src="{{ uploaded_image }}" alt="receipt" width="200" height="300" >
+   {% endif %}
+  
+   {% if extracted_text %}
+     <p> The extracted date from the image above in (yyyy/mm/dd) format is: <b> {{ extracted_text }} </b> </p>
+  
+   {% else %}
+     <h3>The extracted text will be displayed here</h3>
+   {% endif %}
+   
+ </body>
+</html>

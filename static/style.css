@@ -1,0 +1,16 @@
+/* static/style.css */
+
+h1 {
+  color: black;
+  font-variant-caps: all-small-caps;
+  font-size: 24px;
+}
+
+h3 {
+  color: white;
+  font-size: 12px;
+}
+
+body {
+  background-color: rgba(0, 200, 150, 1);
+}
